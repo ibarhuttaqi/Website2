@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+body {
+    background-color: #ccc;;
+    text-align: center;
+    background-image: url(img/trees.webp);
+}
+.container {
+    width: 600px;
+    background-color: #ccc;;
+    border: 5px solid white;
+    margin: 10px auto;
+    overflow: auto;
+}
+.thumb {
+    width: 200px;
+    float: left;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+.thumb:hover {
+    filter: opacity(.5);
+    cursor: pointer;
+}
+
+
+@keyframes fade {
+    0% {
+        
+    }
+    100% {
+        filter: opacity(1);
+    }
+}
+.fadee {
+    filter: opacity(0);
+    animation: fade 1s forwards;
+}
+.active {
+    filter: opacity(.5);
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suit Jawa</title>
+</head>
+<body>
+    <script>
+        let mainLagi = true;
+
+        while(mainLagi){
+            
+
+            alert('Selamat Datang di Permainan Suit Jawa !!');
+            const pPlayer = prompt('Tentukan Pilihan Anda ! \nPilihan : Semut, Gajah, Manusia');
+            // console.log(pPlayer);
+            const aKom = Math.round(Math.random()*3+1);
+            // console.log(aKom);
+            let pKom = null;
+            
+            if(aKom==1){
+                pKom = 'Semut';
+            }else if(aKom==2){
+                pKom = 'Gajah';
+            }else {
+                pKom = 'Manusia';
+            }
+
+
+            let hasil = '';
+            if(pPlayer=='Semut'){
+                if(pKom=='Semut'){
+                    hasil = 'Seri';
+                    // alert('Hasil Seri');
+                }
+                if(pKom=='Gajah'){
+                    hasil = 'menang'
+                    // alert('Player Menang! \nKomputer memilih ' + pKom);
+                }else {
+                    hasil = 'kalah'
+                    // alert('Kamu Kalah! \nKomputer memilih ' + pKom);
+                }
+            }else if(pPlayer=='Gajah'){
+                if(pKom=='Semut'){
+                    hasil = 'kalah'
+                    // alert('Kamu Kalah! \nKomputer memilih ' + pKom);
+                }
+                if(pKom=='Gajah'){   
+                    hasil = 'Seri';        
+                    // alert('Hasil Seri');
+                }else {
+                    hasil = 'menang'
+                    // alert('Player Menang! \nKomputer memilih ' + pKom);
+                }
+            }else if(pPlayer=='Manusia'){
+                if(pKom=='Semut'){
+                    hasil = 'menang'
+                    // alert('Player Menang! \nKomputer memilih ' + pKom);    
+                }
+                if(pKom=='Gajah'){
+                    hasil = 'kalah'
+                    // alert('Kamu Kalah! \nKomputer memilih ' + pKom);
+                }else {
+                    hasil = 'Seri';
+                    // alert('Hasil Seri');
+                }
+            }
+            alert('Kamu memilih ' + pPlayer + ' dan Komputer memilih ' + pKom + '\nMaka hasilnya kamu ' + hasil);
+            mainLagi = confirm('Apakah ingin bermain lagi ??');
+        }
+        
+
+
+    </script>
+</body>
+</html>

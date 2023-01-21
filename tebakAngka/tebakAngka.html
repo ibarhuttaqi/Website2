@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tebak Angka</h1>
+    <script>
+        var ronde = true;
+        while(ronde){
+            alert('Selamat Datang di Permainan Tebak Angka ! ');
+            var angkaRandom = Math.floor(Math.random()*11);
+            var kesempatan = 3;
+            
+            while(kesempatan>=0) {
+                var jawaban = prompt('Tebak Angka Secara Random dari 1-10, kita lihat seberapa besar tingkat kehokianmu !');
+                if(jawaban==angkaRandom && kesempatan>0){
+                    alert('Selamat !!! Jawabanmu Benarr !!!');
+                    ronde = confirm('Mau main lagi kah ?');
+                    break;
+                }else if(jawaban>angkaRandom && kesempatan>0){
+                    kesempatan--;
+                    alert('Kasian delohh, angka yg kmu pilih kegedean tuh !' + '\n' + 'Sisa Kesempatan : ' + kesempatan);
+                    if(kesempatan<=0){
+                        alert('Angka Yang Harus Kamu Tebak Itu Adalah : ' + angkaRandom);
+                        ronde = confirm('Mau main lagi kah ?');
+                        break;
+                    }         
+                }else if(jawaban<angkaRandom && kesempatan>0){
+                    kesempatan--;
+                    alert('Kasian delohh, angka yg kmu pilih kekecilen tuh !' + '\n' + 'Sisa Kesempatan : ' + kesempatan);
+                    if(kesempatan<=0){
+                        alert('Angka Yang Harus Kamu Tebak Itu Adalah : ' + angkaRandom);
+                        ronde = confirm('Mau main lagi kah ?');
+                        break;
+                    }          
+                }else{
+                    alert('Kamu nulis apaan ?');
+                    index--;
+                }
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
